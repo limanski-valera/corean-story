@@ -5792,10 +5792,26 @@
                 if (searchButton) searchButton.addEventListener("click", openSearchForm);
             }
         }
+        function initFilter() {
+            if (document.querySelector(".filter") && document.documentElement.clientWidth < 1151) {
+                function openFilter() {
+                    document.documentElement.classList.add("filter-open");
+                    document.documentElement.classList.add("lock");
+                }
+                function closeFilter() {
+                    document.documentElement.classList.remove("filter-open");
+                    document.documentElement.classList.remove("lock");
+                }
+                document.addEventListener("click", (e => {
+                    if (e.target.closest(".catalog__filter-btn-open")) openFilter(); else if (e.target.closest(".filter__btn-close") || e.target.closest(".filter__button-submit") || e.target.closest(".filter__button-clear")) closeFilter();
+                }));
+            }
+        }
         document.addEventListener("DOMContentLoaded", (() => {
             initCart();
             initCatalog();
             initSearch();
+            initFilter();
         }));
         window["FLS"] = false;
         menuInit();
