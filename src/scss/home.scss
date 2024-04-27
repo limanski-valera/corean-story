@@ -89,7 +89,6 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: -1;
-		object-position: center top;
 	}
 	&__content {
 		max-width: toRem(700);
@@ -274,6 +273,7 @@
 		}
 	}
 	&__image {
+		display: block;
 		width: 36.029412%; /* 490/1360 */
 		padding-bottom: 43.382353%; /* 590/1360 */
 		border-radius: 20px;

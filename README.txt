@@ -1,7 +1,6 @@
 # Deploying a dist folder to GitHub Pages
 
 ### ake sure git knows about your subtree (the subfolder with your site).
-
 git add dist && git commit -m "Initial dist subtree commit"
 
 
