@@ -1,6 +1,14 @@
 .header {
 	padding: toRem(20) 0;
 	border-bottom: 1px solid transparent;
+	position: relative;
+	z-index: 100;
+	@media (min-width: $mobile) {
+		&--border {
+			border-bottom: 1px solid rgb(30, 85, 66, 0.4);
+		}
+	}
+
 	transition:
 		background-color 0.3s,
 		color 0.3s;

@@ -14,6 +14,9 @@
 		cursor: pointer;
 		width: 100%;
 		border-bottom: 1px solid #024f3a66;
+		.select_sort & {
+			border-bottom: none;
+		}
 	}
 	// .select__value
 	&__value {
@@ -22,6 +25,9 @@
 		align-items: center;
 		height: toRem(50);
 		gap: toRem(10);
+		.select_sort & {
+			height: auto;
+		}
 		> * {
 			flex: 1 1 auto;
 		}
@@ -77,6 +83,10 @@
 		border: 1px solid #eaecf0;
 		box-shadow: 4px 6px 16px -4px rgba(2, 79, 58, 0.1);
 		padding: toRem(4) toRem(6);
+		.select_sort & {
+			left: auto;
+			right: 0;
+		}
 	}
 	// .select__scroll
 	&__scroll {
@@ -104,6 +114,9 @@
 		font-size: toRem(16);
 		line-height: 1.5;
 		transition: background-color 0.3s;
+		.select_sort & {
+			white-space: nowrap;
+		}
 		&:not(:last-child) {
 			margin-bottom: toRem(2);
 		}
