@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"HomePage" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<div class="input-wrapper">
+					<input type="text" class="input-wrapper__input input" placeholder="Ваше ім’я *" />
+					<span class="input-wrapper__placeholder">Ваше ім’я *</span>
+				</div>
+				<div class="select-wrapper">
+					<select name="city" data-scroll="240">
+						<option value="" selected></option>
+						<option value="kyiv">Київ</option>
+						<option value="kharkiv">Харків</option>
+						<option value="odessa">Одеса</option>
+						<option value="dnipro">Дніпро</option>
+					</select>
+					<span class="select-wrapper__placeholder">Місто</span>
+				</div>
+				<button class="button button--green">в кошик - 500 UAH</button>
+				<div class="showcase">
+					<div class="showcase__container">
+						<h2 class="showcase__title title">Нові товари</h2>
+						<div class="showcase__slider swiper">
+							<div class="showcase__wrapper swiper-wrapper">
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"02-p.png","title":"Освітлююча ампула","description":"Mellow Bloom Brightening Ampoule"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"03-p.png","title":"Заспокійливий тонер для обличчя","description":"Anua Heartleaf 77% Soothing"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"01-p.png","title":"Маска для обличчя живильна з травами","description":"RE:P Fresh Mask With Real Nutrition "})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"04-p.png","title":"Освітлювальний крем для обличчя","description":"LalaRecipe - Yuzu Vita C Cream"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"05-p.png","title":"Заспокійливий тонер-мусс з азуленом","description":"Neogen Sur.Medic Azulene Soothing ..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"02-p.png","title":"Освітлююча ампула","description":"Mellow Bloom Brightening Ampoule"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"03-p.png","title":"Заспокійливий тонер для обличчя","description":"Anua Heartleaf 77% Soothing"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"01-p.png","title":"Маска для обличчя живильна з травами","description":"RE:P Fresh Mask With Real Nutrition "})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"04-p.png","title":"Освітлювальний крем для обличчя","description":"LalaRecipe - Yuzu Vita C Cream"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"jpg":"01-j.jpeg","png":"05-p.png","title":"Заспокійливий тонер-мусс з азуленом","description":"Neogen Sur.Medic Azulene Soothing ..."})
+								</div>
+							</div>
+							<div class="showcase__buttons">
+								<button type="button" class="swiper-button swiper-button-prev _icon-arrow-right"></button>
+								<button type="button" class="swiper-button swiper-button-next _icon-arrow-right"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

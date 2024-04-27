@@ -1,0 +1,246 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.card {
+	max-width: toRem(248);
+	margin: 0 auto;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	@media (any-hover: hover) {
+		&:hover {
+			.card__image img:first-child {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.card__image img:last-child {
+				opacity: 0;
+				transform: translate(0, 30%);
+			}
+		}
+	}
+	&:active {
+		.card__image img:first-child {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		.card__image img:last-child {
+			opacity: 0;
+			transform: translate(0, 30%);
+		}
+	}
+	&__image {
+		display: block;
+		width: 100%;
+		position: relative;
+		padding-bottom: 120.967742%; /* 300/248 */
+		border-radius: 20px;
+		overflow: hidden;
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+		@media (max-width: $mobile) {
+			border-radius: 10px;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition:
+				opacity 1s,
+				transform 1s;
+			&:first-child {
+				opacity: 0;
+				transform: translateY(-30%);
+			}
+			&:last-child {
+				transition:
+					opacity 0.5s,
+					transform 1s;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+	}
+	&__title {
+		@include adaptiveValue("font-size", 16, 12);
+		font-weight: 700;
+		line-height: 1.2;
+		text-transform: uppercase;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 8, 4);
+		}
+	}
+	&__title-link {
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #033829;
+			}
+		}
+		&:active {
+			color: #033829;
+		}
+	}
+	&__description {
+		color: #9f9f9f;
+		line-height: 1.3;
+		flex: 1 1 auto;
+		@include adaptiveValue("font-size", 14, 12);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 4);
+		}
+	}
+	&__button {
+		align-self: center;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}
+//========================================================================================================================================================
+.showcase {
+	@include adaptiveValue("margin-bottom", 120, 55);
+	&__container {
+		max-width: toRem(1430);
+	}
+	&__title {
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 32);
+		}
+	}
+	&__slider {
+		@media (min-width: $mobile) {
+			padding: 0 toRem(20);
+			position: relative;
+		}
+	}
+	&__wrapper {
+		&.swiper-wrapper {
+			@media (max-width: $mobile) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				row-gap: toRem(32);
+				column-gap: toRem(16);
+			}
+		}
+	}
+	&__slide {
+		min-width: 0;
+	}
+	&__buttons {
+		display: none;
+		.swiper-initialized & {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			transform: translateY(-50%);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 3;
+			pointer-events: none;
+		}
+	}
+}
+//========================================================================================================================================================
+.title {
+	@include adaptiveValue("font-size", 46, 20);
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+.swiper-button {
+	width: toRem(40);
+	height: toRem(40);
+	border-radius: 50%;
+	border: 1px solid $mainColor;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: toRem(17);
+	pointer-events: all;
+	transition:
+		color 0.3s,
+		background-color 0.3s,
+		border-color 0.3s,
+		opacity 0.3s;
+	&.swiper-button-disabled {
+		opacity: 0;
+		pointer-events: none;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $mainColor;
+			color: $lightPinkColor;
+		}
+	}
+}
+.swiper-button-prev {
+	transform: rotate(180deg);
+}
+//========================================================================================================================================================
+.search-form {
+	@media (min-width: $mobile) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: toRem(20);
+		z-index: 100;
+		background-color: $mainColor;
+		visibility: hidden;
+		opacity: 0;
+		transition:
+			visibility 0.3s,
+			opacity 0.3s;
+		._search-open & {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	@media (max-width: $mobile) {
+		&:not(:last-child) {
+			margin-bottom: toRem(32);
+		}
+	}
+	&__input-wrapper {
+		@media (min-width: $mobile) {
+			max-width: toRem(550);
+			margin: 0 auto;
+		}
+		&::before {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: toRem(24);
+			height: toRem(24);
+			pointer-events: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $lightPinkColor;
+			font-size: toRem(18);
+		}
+	}
+	.input {
+		border-color: rgba(251, 222, 236, 0.4);
+		color: $lightPinkColor;
+	}
+}
+//========================================================================================================================================================
+._light-pink {
+	color: $lightPinkColor;
+}
+//========================================================================================================================================================

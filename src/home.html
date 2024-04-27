@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Головна" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="main-block">
+					<div class="main-block__container">
+						<div class="main-block__slider swiper">
+							<div class="main-block__wrapper swiper-wrapper">
+								<div class="main-block__slide swiper-slide">
+									<div class="banner">
+										<img width="1360" height="720" src="@img/main-block/01.png" alt="" />
+										<div class="banner__content">
+											<h2 class="banner__title _light-pink">
+												Ваш провідник у світ корейської краси та догляду <span class="banner__text">Досвіджуйте красу разом з офіційним дистриб'ютором корейських брендів</span>
+											</h2>
+										</div>
+									</div>
+								</div>
+								<div class="main-block__slide swiper-slide">
+									<div class="banner">
+										<img width="1360" height="720"  src="@img/main-block/02.png" alt="" />
+										<div class="banner__content">
+											<h3 class="banner__label">SUR.MEDIC</h3>
+											<h2 class="banner__title">Набір мініатюр AZULENE SOOTHING TRIAL KIT</h2>
+											<a href="#" class="banner__button button">Купити</a>
+										</div>
+									</div>
+								</div>
+								<div class="main-block__slide swiper-slide">
+									<div class="banner">
+										<div class="banner__content">
+											<img width="1360" height="720"  src="@img/main-block/03.png" alt="" />
+											<h3 class="banner__label">LALARECIPE</h3>
+											<h2 class="banner__title">Пінка для вмивання Yuzu Self Foaming 3in1 Peel Cleanser</h2>
+											<a href="#" class="banner__button button">Купити</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+				<div class="partners">
+					<img width="1500" height="130" src="@img/korean-story-text.svg" alt="" class="partners__bg" />
+					<div class="partners__items">
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/01.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/02.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/03.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/04.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/01.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/02.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/03.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/04.svg" alt="" class="partners__logo" />
+						</div>
+					</div>
+					<div aria-hidden="true" class="partners__items">
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/01.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/02.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/03.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/04.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/01.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/02.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/03.svg" alt="" class="partners__logo" />
+						</div>
+						<div class="partners__item">
+							<img width="180" height="40" src="@img/partners/04.svg" alt="" class="partners__logo" />
+						</div>
+					</div>
+				</div>
+				<div class="showcase">
+					<div class="showcase__container">
+						<h2 class="showcase__title title">бестселери</h2>
+						<div class="showcase__slider swiper">
+							<div class="showcase__wrapper swiper-wrapper">
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"01-2.png","second":"01.png","title":"Заспокійливий тонер-мусс з азуленом","description":"Neogen Sur.Medic Azulene Soothing..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"02-2.png","second":"02.png","title":"Ампульні тонер-педи з вітаміном С","description":"LALARECIPE Yuzu Vita C Ampoule ..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"03-2.png","second":"03.png","title":"Зволожуюча заспокійлива сироватка","description":"Torriden DIVE-IN Low Molecule ..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"04-2.png","second":"04.png","title":"Омолоджуючий крем для очей з пептидами","description":"Омолоджуючий крем для очей з пептидами"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"05-2.png","second":"05.png","title":"Заспокійливий тонер для обличчя","description":"Anua Heartleaf 77% Soothing"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"06-2.png","second":"06.png","title":"Маска для обличчя живильна з травами","description":"RE:P Fresh Mask With Real ..."})
+								</div>
+							</div>
+							<div class="showcase__buttons">
+								<button type="button" class="swiper-button swiper-button-prev _icon-arrow-right"></button>
+								<button type="button" class="swiper-button swiper-button-next _icon-arrow-right"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="categories-at-home">
+					<div class="categories-at-home__container">
+						<div class="categories-at-home__content">
+							<div class="categories-at-home__body">
+								<h2 class="categories-at-home__title">категорії</h2>
+								<nav class="categories-at-home__nav">
+									<ul class="categories-at-home__list">
+										<li class="categories-at-home__list-item">
+											<a href="#" class="categories-at-home__link">Обличчя</a>
+											<div class="categories-at-home__image-wrapper">
+												<div class="categories-at-home__image">
+													<img width="490" height="590" src="@img/menu/sub-menu-01.png" alt="" />
+												</div>
+											</div>
+										</li>
+										<li class="categories-at-home__list-item">
+											<a href="#" class="categories-at-home__link">Волосся</a>
+											<div class="categories-at-home__image-wrapper">
+												<div class="categories-at-home__image">
+													<img width="490" height="590" src="@img/menu/sub-menu-02.png" alt="" />
+												</div>
+											</div>
+										</li>
+										<li class="categories-at-home__list-item">
+											<a href="#" class="categories-at-home__link">Тіло</a>
+											<div class="categories-at-home__image-wrapper">
+												<div class="categories-at-home__image">
+													<img width="490" height="590" src="@img/menu/sub-menu-03.jpeg" alt="" />
+												</div>
+											</div>
+										</li>
+										<li class="categories-at-home__list-item">
+											<a href="#" class="categories-at-home__link">Health&Care</a>
+											<div class="categories-at-home__image-wrapper">
+												<div class="categories-at-home__image">
+													<img width="490" height="590" src="@img/menu/sub-menu-04.jpeg" alt="" />
+												</div>
+											</div>
+										</li>
+										<li class="categories-at-home__list-item">
+											<a href="#" class="categories-at-home__link">макіяж</a>
+											<div class="categories-at-home__image-wrapper">
+												<div class="categories-at-home__image">
+													<img width="490" height="590" src="@img/menu/sub-menu-05.png" alt="" />
+												</div>
+											</div>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<div class="categories-at-home__bg">
+								<img width="665" height="826" src="@img/categories-at-home-bg.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="showcase">
+					<div class="showcase__container">
+						<h2 class="showcase__title title">Нові товари</h2>
+						<div class="showcase__slider swiper">
+							<div class="showcase__wrapper swiper-wrapper">
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"07-2.png","second":"07.png","title":"Освітлююча ампула","description":"Mellow Bloom Brightening ..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"05-2.png","second":"05.png","title":"Заспокійливий тонер для обличчя","description":"Anua Heartleaf 77% Soothing"})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"06-2.png","second":"06.png","title":"Маска для обличчя живильна з травами","description":"RE:P Fresh Mask With Real ..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"08-2.png","second":"08.png","title":"Освітлювальний крем для обличчя","description":"LalaRecipe - Yuzu Vita C ..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"01-2.png","second":"01.png","title":"Заспокійливий тонер-мусс з азуленом","description":"Neogen Sur.Medic Azulene Soothing..."})
+								</div>
+								<div class="showcase__slide swiper-slide">
+									@@include('html/_card.html',{"first":"02-2.png","second":"02.png","title":"Ампульні тонер-педи з вітаміном С","description":"LALARECIPE Yuzu Vita C Ampoule ..."})
+								</div>
+							</div>
+							<div class="showcase__buttons">
+								<button type="button" class="swiper-button swiper-button-prev _icon-arrow-right"></button>
+								<button type="button" class="swiper-button swiper-button-next _icon-arrow-right"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

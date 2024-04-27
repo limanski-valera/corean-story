@@ -1,0 +1,352 @@
+.menu {
+	@media (max-width: $mobile) {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: -100%;
+		top: 0;
+		overflow: auto;
+		padding: toRem(90) toRem(15) toRem(30) toRem(15);
+		transition: left 0.3s;
+		background-color: $mainColor;
+		color: $lightPinkColor;
+		z-index: 4;
+		&::before {
+			content: "";
+			position: fixed;
+			width: 100%;
+			height: toRem(70);
+			left: -100%;
+			top: 0;
+			transition: left 0.3s;
+			z-index: 2;
+			background-color: $mainColor;
+		}
+		.menu-open & {
+			left: 0;
+			&::before {
+				left: 0;
+			}
+		}
+	}
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		@media (min-width: $mobile) {
+			display: flex;
+			column-gap: toRem(30);
+			row-gap: toRem(30);
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	// .menu__item
+	&__item {
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+			&[data-catalog] {
+				margin-bottom: toRem(32);
+				.menu__link {
+					display: none;
+				}
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+		font-weight: 700;
+		text-transform: uppercase;
+		transition: color 0.3s;
+		@media (min-width: $mobile) {
+			position: relative;
+			z-index: 2;
+			white-space: nowrap;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $pinkColor;
+				}
+			}
+		}
+		&:active {
+			color: $pinkColor;
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(12);
+		}
+	}
+	&__sub-menu {
+	}
+}
+.sub-menu {
+	@media (min-width: $mobile) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		padding: toRem(130) toRem(40) toRem(40);
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		background-color: $mainColor;
+		color: $lightPinkColor;
+		min-height: 33vw;
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 0 0 20px 20px;
+		transition:
+			visibility 0.3s,
+			opacity 0.3s;
+		._catalog-open & {
+			opacity: 1;
+			visibility: visible;
+		}
+		@media (max-width: $tablet) {
+			flex-direction: row;
+			padding-top: toRem(100);
+			padding-left: toRem(30);
+			column-gap: toRem(40);
+			min-height: toRem(400);
+		}
+	}
+
+	&__item {
+		@media (min-width: $mobile) {
+			padding-bottom: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			border-bottom: 1px solid rgba(251, 222, 236, 0.4);
+		}
+	}
+	&__link {
+		position: relative;
+		font-weight: 700;
+		line-height: 1.2;
+		text-transform: uppercase;
+		list-style: none;
+		&::marker,
+		&::-webkit-details-marker {
+			display: none;
+		}
+		@media (min-width: $mobile) {
+			max-width: toRem(317);
+			font-size: toRem(20);
+			z-index: 2;
+			display: inline-block;
+			transition: color 0.3s;
+			cursor: pointer;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $pinkColor;
+				}
+			}
+			._active & {
+				color: $pinkColor;
+			}
+			img {
+				display: none;
+			}
+			._marker {
+				display: none;
+			}
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(8) toRem(24) toRem(8) 0;
+			display: flex;
+			align-items: center;
+			gap: toRem(8);
+			font-size: toRem(12);
+			img {
+				width: toRem(40);
+				height: toRem(40);
+				object-fit: cover;
+				border-radius: 10px;
+			}
+			._marker {
+				width: toRem(16);
+				height: toRem(16);
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+				&::before,
+				&::after {
+					content: "";
+					width: toRem(9);
+					height: toRem(1);
+					background-color: $lightPinkColor;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+				}
+				&::before {
+					transform: translate(-50%, -50%);
+				}
+				&::after {
+					transform: translate(-50%, -50%) rotate(90deg);
+				}
+			}
+			&._spoller-active ._marker::after {
+				display: none;
+			}
+		}
+	}
+	&__sub-categories {
+		@media (min-width: $mobile) {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			padding: 0 toRem(40) 0 toRem(387);
+			top: toRem(130);
+			opacity: 0;
+			visibility: hidden;
+			display: flex;
+			justify-content: flex-end;
+			gap: toRem(30);
+			transition:
+				visibility 0.3s,
+				opacity 0.3s;
+			._active & {
+				visibility: visible;
+				opacity: 1;
+			}
+			@media (max-width: $pc) {
+				padding: 0 toRem(40) 0 toRem(250);
+			}
+			@media (max-width: $tablet) {
+				padding: toRem(20) toRem(30) 0 toRem(30);
+			}
+		}
+		@media (max-width: $mobile) {
+			padding-bottom: toRem(16);
+		}
+	}
+	&__sub-categories-list {
+		@media (min-width: $mobile) {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			row-gap: toRem(10);
+			column-gap: toRem(30);
+			max-height: toRem(198);
+			flex-wrap: wrap;
+		}
+	}
+	&__sub-categories-item {
+		@media (min-width: $mobile) {
+			max-width: 50%;
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
+	}
+	&__sub-categories-link {
+		text-transform: capitalize;
+		line-height: 1.2;
+		transition: color 0.3s;
+		display: inline-block;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $pinkColor;
+			}
+		}
+		&:active {
+			color: $pinkColor;
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(14);
+		}
+	}
+	&__item-image {
+		@media (min-width: $mobile) {
+			flex: 0 0 auto;
+			width: 22vw;
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__item-image-wrapper {
+		@media (min-width: $mobile) {
+			padding-bottom: 94.339623%; /* 300/318 */
+			border-radius: 20px;
+			overflow: hidden;
+			position: relative;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+//Burger Icon
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(32);
+		height: toRem(32);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0;
+			position: absolute;
+			width: 75%;
+			height: toRem(1.5);
+			background-color: $mainColor;
+			border-radius: 10px;
+			.menu-open & {
+				background-color: $lightPinkColor;
+				width: 75%;
+			}
+		}
+		&::before {
+			top: toRem(8);
+		}
+		&::after {
+			bottom: toRem(8);
+			width: 50%;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
