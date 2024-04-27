@@ -29,6 +29,7 @@ import { zip } from "./config/gulp-tasks/zip.js";
 import { sprite } from "./config/gulp-tasks/sprite.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
 import { otfToTtf, ttfToWoff2, woff2Copy, fontsStyle } from "./config/gulp-tasks/fonts.js";
+import { gitHub } from "./config/gulp-tasks/gh-pages.js";
 
 // Послідовна обробка шрифтів
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff2, woff2Copy, fontsStyle);
@@ -46,18 +47,21 @@ export { fonts }
 export { sprite }
 export { ftp }
 export { zip }
+export { gitHub };
 
 // Побудова сценаріїв виконання завдань
 const development = devTasks;
 const build = buildTasks;
 const deployFTP = gulp.series(buildTasks, ftp);
 const deployZIP = gulp.series(buildTasks, zip);
+const deployGh = gulp.series(buildTasks, gitHub);
 
 // Експорт сценаріїв
 export { development }
 export { build }
 export { deployFTP }
 export { deployZIP }
+export { deployGh };
 
 // Виконання сценарію за замовчуванням
 gulp.task('default', development);
