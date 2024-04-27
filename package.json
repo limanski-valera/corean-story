@@ -17,7 +17,8 @@
 		"devbuild": "gulp build --build --nowebp",
 		"noimgbuild": "gulp build --build --noimgopt",
 		"tmp": "gulp -f gulpfile.tmp.js",
-		"bem": "fls-bemtree-from-html"
+		"bem": "fls-bemtree-from-html",
+		"github": "gulp deployGh"
 	},
 	"devDependencies": {
 		"@babel/cli": "latest",

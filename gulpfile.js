@@ -7,15 +7,15 @@ import { pathtofiles } from "./config/gulp-settings.js";
 
 // Передаємо значення у глобальну змінну
 global.app = {
-	isBuild: process.argv.includes('--build'),
-	isDev: !process.argv.includes('--build'),
-	isWebP: !process.argv.includes('--nowebp'),
-	isImgOpt: !process.argv.includes('--noimgopt'),
-	isFontsReW: process.argv.includes('--rewrite'),
+	isBuild: process.argv.includes("--build"),
+	isDev: !process.argv.includes("--build"),
+	isWebP: !process.argv.includes("--nowebp"),
+	isImgOpt: !process.argv.includes("--noimgopt"),
+	isFontsReW: process.argv.includes("--rewrite"),
 	gulp: gulp,
 	path: pathtofiles,
-	plugins: plugins
-}
+	plugins: plugins,
+};
 
 // Імпорт завдань
 import { reset } from "./config/gulp-tasks/reset.js";
@@ -37,16 +37,17 @@ const fonts = gulp.series(reset, otfToTtf, ttfToWoff2, woff2Copy, fontsStyle);
 const devTasks = gulp.series(fonts, gitignore);
 // Порядок виконання завдань для режиму продакшн
 const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, gulp.parallel(WebP, copySvg), gitignore));
+const deployGithubPages = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, gulp.parallel(WebP, copySvg), gitignore), gitHub);
 
 // Експорт завдань
-export { html }
-export { css }
-export { js }
-export { jsDev }
-export { fonts }
-export { sprite }
-export { ftp }
-export { zip }
+export { html };
+export { css };
+export { js };
+export { jsDev };
+export { fonts };
+export { sprite };
+export { ftp };
+export { zip };
 export { gitHub };
 
 // Побудова сценаріїв виконання завдань
@@ -54,20 +55,14 @@ const development = devTasks;
 const build = buildTasks;
 const deployFTP = gulp.series(buildTasks, ftp);
 const deployZIP = gulp.series(buildTasks, zip);
-const deployGh = gulp.series(buildTasks, gitHub);
+const deployGh = deployGithubPages;
 
 // Експорт сценаріїв
-export { development }
-export { build }
-export { deployFTP }
-export { deployZIP }
+export { development };
+export { build };
+export { deployFTP };
+export { deployZIP };
 export { deployGh };
 
 // Виконання сценарію за замовчуванням
-gulp.task('default', development);
-
-
-
-
-
-
+gulp.task("default", development);
