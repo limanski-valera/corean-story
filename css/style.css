@@ -804,7 +804,8 @@ body::after {
 }
 .tabs__navigation::-webkit-scrollbar {
   opacity: 0;
-  height: 0
+  height: 0;
+  width: 0
 }
 .tabs__title {
   padding-bottom: 1.25rem;
