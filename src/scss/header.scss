@@ -32,6 +32,10 @@
 			display: flex;
 			justify-content: space-between;
 		}
+		.simple-header & {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 	&__logo {
 		width: toRem(148);
@@ -392,5 +396,9 @@
 		text-transform: uppercase;
 	}
 	&__price-sum-value {
+	}
+	&__count {
+		font-size: toRem(14);
+		color: #9f9f9f;
 	}
 }

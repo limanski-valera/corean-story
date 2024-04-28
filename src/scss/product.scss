@@ -204,12 +204,6 @@
 	&__container {
 	}
 }
-.text {
-	line-height: 1.3;
-	&--grey {
-		color: #9f9f9f;
-	}
-}
 .testimonials {
 	.text {
 		@include adaptiveValue("font-size", 16, 12);
@@ -287,8 +281,6 @@
 			}
 		}
 	}
-}
-.button {
 }
 .testimonial {
 	border-bottom: 1px solid rgba(2, 79, 58, 0.4);

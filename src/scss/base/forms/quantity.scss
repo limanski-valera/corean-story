@@ -7,7 +7,7 @@
 	border: 1px solid #024f3a;
 	border-radius: 30px;
 	color: #1e5542;
-	@media (max-width:$mobile){
+	@media (max-width: $mobile) {
 		height: toRem(28);
 	}
 	// .quantity__button
@@ -49,6 +49,7 @@
 	// .quantity__input
 	&__input {
 		flex: 1 1 auto;
+		pointer-events: none;
 		input {
 			height: 100%;
 			color: #1e5542;

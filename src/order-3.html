@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Замовлення" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_simple-header.htm')
+			<main class="page cart-page">
+				<div class="cart-page__container">
+					<div class="cart-page__body">
+						<form action="#" class="cart-page__main">
+							<nav class="breadcrumbs">
+								<ul class="breadcrumbs__container">
+									<li class="breadcrumbs__item">
+										<a href="page-cart.html" class="breadcrumbs__link link">кошик</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<a href="#" class="breadcrumbs__link link">Адреса</a>
+									</li>
+									<li class="breadcrumbs__item _active">
+										<a href="#" class="breadcrumbs__link link">Оплата</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="cart-page__contacts">
+								<h2 class="cart-page__title">Дані про оплату</h2>
+								<div class="contacts-form">
+									<div class="contacts-form__input-wrapper contacts-form__input-wrapper--double input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="text" name="cardNumber" placeholder="Номер картки *" required />
+										<span class="input-wrapper__placeholder">Номер картки *</span>
+									</div>
+									<div class="contacts-form__input-wrapper input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="text" name="cardDate" placeholder="ММ / РР *" required />
+										<span class="input-wrapper__placeholder">ММ / РР *</span>
+									</div>
+									<div class="contacts-form__input-wrapper input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="email" name="cardCVV" placeholder="CVV код *" required />
+										<span class="input-wrapper__placeholder">CVV код *</span>
+									</div>
+								</div>
+							</div>
+							<button class="cart-page__btn-to-pay button button--green button--fw">сплатити </button>
+						</form>
+						<div data-da=".cart-page__body, 767.98, 0" class="cart-page__secondary">
+							<div class="info-cart-page">
+								<h4 class="info-cart-page__title">замовлення</h4>
+								<div class="info-cart-page__products cart__products">
+									<article class="cart__product product-in-cart">
+										<a href="#" class="product-in-cart__image">
+											<img width="130" height="130" data-src="@img/products/05-2.png" alt="" />
+										</a>
+										<div class="product-in-cart__content">
+											<div class="product-in-cart__header">
+												<div class="product-in-cart__header-main">
+													<h3 class="product-in-cart__title"><a href="#" class="product-in-cart__title-link">Заспокійливий тонер для обличчя</a></h3>
+													<div class="product-in-cart__info">Anua Heartleaf 77% Soothing</div>
+												</div>
+											</div>
+											<div class="product-in-cart__footer">
+												<span class="product-in-cart__count">1 шт.</span>
+												<span class="product-in-cart__price-sum"><span class="product-in-cart__price-sum-value">500</span> UAH</span>
+											</div>
+										</div>
+									</article>
+									<article class="cart__product product-in-cart">
+										<a href="#" class="product-in-cart__image">
+											<img width="130" height="130" data-src="@img/products/06-2.png" alt="" />
+										</a>
+										<div class="product-in-cart__content">
+											<div class="product-in-cart__header">
+												<div class="product-in-cart__header-main">
+													<h3 class="product-in-cart__title"><a href="#" class="product-in-cart__title-link">Заспокійливий тонер для обличчя</a></h3>
+													<div class="product-in-cart__info">Anua Heartleaf 77% Soothing</div>
+												</div>
+											</div>
+											<div class="product-in-cart__footer">
+												<span class="product-in-cart__count">1 шт.</span>
+												<span class="product-in-cart__price-sum"><span class="product-in-cart__price-sum-value">500</span> UAH</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="info-cart-page__items">
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Ціна товарів</div>
+										<div class="info-cart-page__sum">1000 UAH</div>
+									</div>
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Знижка за промокодом</div>
+										<div class="info-cart-page__sum">100 UAH</div>
+									</div>
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Доставка</div>
+										<div class="info-cart-page__sum">від 30 UAH</div>
+									</div>
+								</div>
+								<div class="info-cart-page__result">
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Загальна сума</div>
+										<div class="info-cart-page__sum">930 UAH</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		@@include('html/_chat-button.htm') 
+		@@include('html/_js.htm',{})
+	</body>
+</html>

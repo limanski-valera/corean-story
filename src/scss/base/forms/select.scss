@@ -83,6 +83,7 @@
 		border: 1px solid #eaecf0;
 		box-shadow: 4px 6px 16px -4px rgba(2, 79, 58, 0.1);
 		padding: toRem(4) toRem(6);
+		z-index: 10;
 		.select_sort & {
 			left: auto;
 			right: 0;
@@ -148,6 +149,9 @@
 	}
 
 	// Стан селекту
+	&._select-open {
+		z-index: 10 !important;
+	}
 	&._select-open + .select-wrapper__placeholder {
 		top: 0;
 		font-size: toRem(12);

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Замовлення" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_simple-header.htm')
+			<main class="page cart-page">
+				<div class="cart-page__container">
+					<div class="cart-page__body">
+						<form action="#" class="cart-page__main">
+							<nav class="breadcrumbs">
+								<ul class="breadcrumbs__container">
+									<li class="breadcrumbs__item">
+										<a href="page-cart.html" class="breadcrumbs__link link">кошик</a>
+									</li>
+									<li class="breadcrumbs__item _active">
+										<a href="#" class="breadcrumbs__link link">Адреса</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<a href="#" class="breadcrumbs__link link">Оплата</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="cart-page__contacts">
+								<h2 class="cart-page__title">Контакти</h2>
+								<div class="contacts-form">
+									<div class="contacts-form__input-wrapper input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="text" name="firstName" placeholder="Ваше ім’я *" required />
+										<span class="input-wrapper__placeholder">Ваше ім’я *</span>
+									</div>
+									<div class="contacts-form__input-wrapper input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="text" name="lastName" placeholder="Ваше прізвище *" required />
+										<span class="input-wrapper__placeholder">Ваше прізвище *</span>
+									</div>
+									<div class="contacts-form__input-wrapper input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="email" name="email" placeholder="Email *" required />
+										<span class="input-wrapper__placeholder">Email *</span>
+									</div>
+									<div class="contacts-form__input-wrapper input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="tel" name="phone" placeholder="Телефон *" required />
+										<span class="input-wrapper__placeholder">Телефон *</span>
+									</div>
+								</div>
+							</div>
+							<div class="cart-page__delivery-type">
+								<h2 class="cart-page__title">Спосіб доставки</h2>
+								<div class="delivery-type">
+									<div class="delivery-type__checkbox checkbox">
+										<input id="dt_1" data-error="Ошибка" class="checkbox__input" checked type="radio" value="1" name="deliveryType" />
+										<label for="dt_1" class="checkbox__label"
+											><span class="checkbox__text">У відділення нової пошти</span><span class="delivery-type__days">до 3-х робочих днів</span
+											><span class="delivery-type__price">від 30 UAH</span></label
+										>
+									</div>
+									<div class="delivery-type__checkbox checkbox">
+										<input id="dt_2" data-error="Ошибка" class="checkbox__input" type="radio" value="2" name="deliveryType" />
+										<label for="dt_2" class="checkbox__label"
+											><span class="checkbox__text">Кур'єром нової пошти</span><span class="delivery-type__days">до 5 робочих днів</span
+											><span class="delivery-type__price">від 50 UAH</span></label
+										>
+									</div>
+								</div>
+							</div>
+							<div class="cart-page__delivery-data">
+								<h2 class="cart-page__title">Дані для доставки</h2>
+								<div class="form-delivery-data">
+									<div class="form-delivery-data__row">
+										<div class="form-delivery-data__input-wrapper input-wrapper">
+											<input type="promo" class="input-wrapper__input input" type="text" name="firstName" placeholder="Ваше ім’я *" required/>
+											<span class="input-wrapper__placeholder">Ваше ім’я *</span>
+										</div>
+										<div class="form-delivery-data__input-wrapper input-wrapper">
+											<input type="promo" class="input-wrapper__input input" type="text" name="lastName" placeholder="Ваше прізвище *" required/>
+											<span class="input-wrapper__placeholder">Ваше прізвище *</span>
+										</div>
+										<div class="form-delivery-data__input-wrapper input-wrapper">
+											<input type="promo" class="input-wrapper__input input" type="text" name="middleName" placeholder="Ваше по-батькові *" required/>
+											<span class="input-wrapper__placeholder">Ваше по-батькові *</span>
+										</div>
+									</div>
+									<div class="select-wrapper">
+										<select name="city" data-scroll="240" required>
+											<option value="" selected></option>
+											<option value="kyiv">Київ</option>
+											<option value="kharkiv">Харків</option>
+											<option value="odessa">Одеса</option>
+											<option value="dnipro">Дніпро</option>
+										</select>
+										<span class="select-wrapper__placeholder">Місто</span>
+									</div>
+									<div class="form-delivery-data__row">
+										<div class="form-delivery-data__input-wrapper input-wrapper">
+											<input type="promo" class="input-wrapper__input input" type="text" name="street" placeholder="Вулиця *" required/>
+											<span class="input-wrapper__placeholder">Вулиця *</span>
+										</div>
+										<div class="form-delivery-data__input-wrapper input-wrapper">
+											<input type="promo" class="input-wrapper__input input" type="text" name="house" placeholder="Дім *" required/>
+											<span class="input-wrapper__placeholder">Дім *</span>
+										</div>
+										<div class="form-delivery-data__input-wrapper input-wrapper">
+											<input type="promo" class="input-wrapper__input input" type="text" name="apartment" placeholder="Квартира"/>
+											<span class="input-wrapper__placeholder">Квартира</span>
+										</div>
+									</div>
+									<div class="form-delivery-data__input-wrapper input-wrapper">
+										<input type="promo" class="input-wrapper__input input" type="text" name="secondaryInfo" placeholder="Додаткова інформація" />
+										<span class="input-wrapper__placeholder">Додаткова інформація</span>
+									</div>
+									<div class="form-delivery-data__text">
+										<p>Будь ласка, перевіряйте правильність та цілісність посилки на Новій пошті під час отримання. Отримані замовлення поверненню та обміну не підлягають.</p>
+										<p>
+											Повідомляємо, що у зв’язку з дестабілізацією ситуації в країні терміни доставки можуть збільшитись. Ми робимо усе можливе, аби ви отримали улюблені засоби
+											якнайшвидше. Дякуємо за розуміння!
+										</p>
+									</div>
+								</div>
+							</div>
+							<footer class="cart-page__footer">
+								<a href="#" class="cart-page__btn-back _icon-arrow-right">Продовжити покупки</a>
+								<button type="submit" class="cart-page__btn-checkout button button--green button--fw">оформити</button>
+							</footer>
+						</form>
+						<div data-da=".cart-page__body, 767.98, 0" class="cart-page__secondary">
+							<div class="info-cart-page">
+								<h4 class="info-cart-page__title">замовлення</h4>
+								<div class="info-cart-page__products cart__products">
+									<article class="cart__product product-in-cart">
+										<a href="#" class="product-in-cart__image">
+											<img width="130" height="130" data-src="@img/products/05-2.png" alt="" />
+										</a>
+										<div class="product-in-cart__content">
+											<div class="product-in-cart__header">
+												<div class="product-in-cart__header-main">
+													<h3 class="product-in-cart__title"><a href="#" class="product-in-cart__title-link">Заспокійливий тонер для обличчя</a></h3>
+													<div class="product-in-cart__info">Anua Heartleaf 77% Soothing</div>
+												</div>
+											</div>
+											<div class="product-in-cart__footer">
+												<span class="product-in-cart__count">1 шт.</span>
+												<span class="product-in-cart__price-sum"><span class="product-in-cart__price-sum-value">500</span> UAH</span>
+											</div>
+										</div>
+									</article>
+									<article class="cart__product product-in-cart">
+										<a href="#" class="product-in-cart__image">
+											<img width="130" height="130" data-src="@img/products/06-2.png" alt="" />
+										</a>
+										<div class="product-in-cart__content">
+											<div class="product-in-cart__header">
+												<div class="product-in-cart__header-main">
+													<h3 class="product-in-cart__title"><a href="#" class="product-in-cart__title-link">Заспокійливий тонер для обличчя</a></h3>
+													<div class="product-in-cart__info">Anua Heartleaf 77% Soothing</div>
+												</div>
+											</div>
+											<div class="product-in-cart__footer">
+												<span class="product-in-cart__count">1 шт.</span>
+												<span class="product-in-cart__price-sum"><span class="product-in-cart__price-sum-value">500</span> UAH</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="info-cart-page__items">
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Ціна товарів</div>
+										<div class="info-cart-page__sum">1000 UAH</div>
+									</div>
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Знижка за промокодом</div>
+										<div class="info-cart-page__sum">100 UAH</div>
+									</div>
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Доставка</div>
+										<div class="info-cart-page__sum">від 30 UAH</div>
+									</div>
+								</div>
+								<div class="info-cart-page__result">
+									<div class="info-cart-page__item">
+										<div class="info-cart-page__label">Загальна сума</div>
+										<div class="info-cart-page__sum">930 UAH</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		@@include('html/_chat-button.htm') 
+		@@include('html/_js.htm',{})
+	</body>
+</html>
