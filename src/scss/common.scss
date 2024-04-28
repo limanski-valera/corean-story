@@ -336,6 +336,8 @@
 		width: toRem(64);
 		height: toRem(64);
 		font-size: toRem(24);
+		right: toRem(15);
+		bottom: toRem(15);
 		&:active {
 			font-size: toRem(27);
 		}

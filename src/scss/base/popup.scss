@@ -31,12 +31,15 @@ body::after {
 	&__wrapper {
 		min-height: 100%;
 		pointer-events: all;
+		display: flex;
 		@media (min-width: $mobile) {
 			flex: 1 1 auto;
 			width: 100%;
-			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
 		}
 	}
 	&__content {
@@ -59,7 +62,8 @@ body::after {
 			border-radius: 20px;
 		}
 		@media (max-width: $mobile) {
-			min-height: 100vh;
+			// min-height: 100vh;
+			flex: 1 1 auto;
 			background-color: #fcf5fa;
 			padding: toRem(30) toRem(16) toRem(24);
 		}
@@ -79,6 +83,10 @@ body::after {
 			top: toRem(24);
 			right: toRem(16);
 			font-size: toRem(20);
+		}
+		&:focus {
+			outline: none;
+			transform: scale(1.2);
 		}
 	}
 	&__title {

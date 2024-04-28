@@ -12,6 +12,11 @@
 			margin: 0 toRem(-15);
 			padding: 0 toRem(15);
 		}
+		&::-webkit-scrollbar {
+			opacity: 0;
+			height: 0;
+			width: 0;
+		}
 	}
 	// .tabs__title
 	&__title {
