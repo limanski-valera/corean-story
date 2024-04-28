@@ -293,6 +293,10 @@
 			height: toRem(110);
 			border-radius: 10px;
 		}
+		@media (max-width: toRem(374)) {
+			width: toRem(80);
+			height: toRem(80);
+		}
 		@media (any-hover: hover) {
 			&:hover img {
 				transform: scale(1.05);
