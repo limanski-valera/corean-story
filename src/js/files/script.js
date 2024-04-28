@@ -12,12 +12,14 @@ function initCart() {
 
 		function openCart() {
 			document.documentElement.classList.add(activeClass);
+			document.documentElement.classList.add("lock");
 
 			document.addEventListener("click", closeWatcher);
 		}
 
 		function closeCart() {
 			document.documentElement.classList.remove(activeClass);
+			document.documentElement.classList.remove("lock");
 		}
 
 		function closeWatcher(event) {
@@ -116,10 +118,45 @@ function initFilter() {
 		});
 	}
 }
+function initDownloadInput() {
+	if (document.querySelector(".download-input")) {
+		const wrapper = document.querySelector(".download-input");
+		const input = wrapper.querySelector(".download-input__input");
+
+		function addFilesString(files, filesLength) {
+			const filesNamesArray = [];
+			for (let i = 0; i < filesLength; i++) {
+				filesNamesArray.push(files[i].name);
+			}
+
+			const string = filesNamesArray.join(", ");
+
+			const elem = document.createElement("span");
+			elem.className = "download-input__files";
+			elem.textContent = string;
+
+			wrapper.append(elem);
+		}
+
+		function removeFilesString() {
+			const string = wrapper.querySelector(".download-input__files");
+			if (string) string.remove();
+		}
+
+		input.addEventListener("change", (e) => {
+			removeFilesString();
+
+			const filesLength = e.target.files.length;
+
+			if (filesLength) addFilesString(e.target.files, filesLength);
+		});
+	}
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 	initCart();
 	initCatalog();
 	initSearch();
 	initFilter();
+	initDownloadInput();
 });

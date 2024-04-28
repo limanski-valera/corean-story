@@ -1,15 +1,28 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
-					<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
-				</svg>
-			</button>
-			<div class="popup__text">
-				Popup content
-			</div>
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<h3 class="popup__title">відгуки</h3>
+			<form action="#" class="popup__form">
+				<div data-rating="set" data-rating-value="1.0" class="rating"></div>
+				<div class="input-wrapper">
+					<input type="text" name="name" class="input-wrapper__input input" placeholder="Ваше ім’я *" />
+					<span class="input-wrapper__placeholder">Ваше ім’я *</span>
+				</div>
+				<div class="input-wrapper">
+					<input type="email" name="name" class="input-wrapper__input input" placeholder="Email *" />
+					<span class="input-wrapper__placeholder">Email *</span>
+				</div>
+				<div class="input-wrapper input-wrapper--textarea">
+					<textarea name="testimonial" class="input-wrapper__input input" placeholder="Email *"></textarea>
+					<span class="input-wrapper__placeholder">Ваш відгук *</span>
+				</div>
+				<div class="popup__download download-input">
+					<input id="file" type="file" class="download-input__input" multiple/>
+					<label for="file" class="download-input__label _icon-download"> Додати зображення </label>
+				</div>
+				<button class="popup__button button button--green button--fw" type="submit">Залишити відгук</button>
+			</form>
 		</div>
 	</div>
 </div>

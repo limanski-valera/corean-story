@@ -305,3 +305,39 @@
 		text-transform: uppercase;
 	}
 }
+//========================================================================================================================================================
+.chat-button {
+	position: fixed;
+	bottom: toRem(20);
+	right: toRem(40);
+	width: toRem(80);
+	height: toRem(80);
+	background-color: $pinkColor;
+	filter: drop-shadow(4px 6px 14px rgba(182, 182, 182, 0.15));
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: toRem(32);
+	color: #fff;
+	transition:
+		font-size 0.3s,
+		filter 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			filter: none;
+			font-size: toRem(35);
+			@media (max-width: $mobile) {
+				font-size: toRem(27);
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		width: toRem(64);
+		height: toRem(64);
+		font-size: toRem(24);
+		&:active {
+			font-size: toRem(27);
+		}
+	}
+}

@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from "swiper";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination, Thumbs } from "swiper/modules";
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -92,6 +92,32 @@ function initSliders() {
 				},
 			},
 			on: {},
+		});
+	}
+	if (document.querySelector(".product-small-images__slider") && document.querySelector(".product-big-images__slider")) {
+		const smallImageSlider = new Swiper(".product-small-images__slider", {
+			observer: true,
+			observeParents: true,
+			slidesPerView: "auto",
+			spaceBetween: 20,
+			direction: "vertical",
+		});
+		const bigImageSlider = new Swiper(".product-big-images__slider", {
+			modules: [EffectFade, Thumbs],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 10,
+			autoHeight: true,
+			thumbs: {
+				swiper: smallImageSlider,
+			},
+			breakpoints: {
+				768: {
+					autoHeight: false,
+					effect: "fade",
+				},
+			},
 		});
 	}
 }

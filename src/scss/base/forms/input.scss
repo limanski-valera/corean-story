@@ -46,9 +46,17 @@ textarea {
 		top: 50%;
 		font-size: toRem(14);
 	}
+	.input-wrapper--textarea &:placeholder-shown + .input-wrapper__placeholder {
+		top: toRem(10);
+		font-size: toRem(14);
+	}
 	&:focus + .input-wrapper__placeholder {
 		top: 0;
 		font-size: toRem(12);
+		.input-wrapper--textarea & {
+			top: toRem(-10);
+			font-size: toRem(12);
+		}
 	}
 	&._form-focus {
 	}
@@ -67,4 +75,33 @@ textarea {
 textarea.input {
 	resize: none;
 	padding: 0px 0px;
+	height: toRem(100);
+	@media (max-width:$mobile){
+		height: toRem(260);
+	}
+}
+
+.download-input {
+	position: relative;
+	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	&__label {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+		font-size: toRem(18);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&__files {
+		color: #9F9F9F;
+		font-size: toRem(12);
+	}
 }

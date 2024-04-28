@@ -7,6 +7,7 @@
 			display: flex;
 			align-items: center;
 			gap: toRem(10);
+			flex-wrap: wrap;
 		}
 		&__item {
 			&:last-child {
@@ -166,31 +167,21 @@
 		text-transform: uppercase;
 	}
 	&__cards-list {
-		@media (min-width: $mobile) {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			gap: toRem(30);
-			@media (max-width: $pc) {
-				grid-template-columns: repeat(3, 1fr);
-			}
-			@media (max-width: $tablet) {
-				grid-template-columns: repeat(2, 1fr);
-				gap: toRem(16);
-				max-width: 100%;
-			}
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: toRem(30);
+		@media (max-width: $pc) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: toRem(16);
+			max-width: 100%;
 		}
 		@media (max-width: $mobile) {
-			display: flex;
-			gap: toRem(30);
-			flex-wrap: wrap;
-			justify-content: center;
+			grid-template-columns: repeat(2, calc((100% - toRem(16)) / 2));
 			.card {
-				margin: 0;
-				flex: 0 0 calc((100% - toRem(16)) / 2);
-				min-width: 0;
-			}
-			@media (max-width: $mobileSmall) {
-				column-gap: toRem(16);
+				width: 100%;
 			}
 		}
 	}
@@ -266,22 +257,4 @@
 			justify-content: center;
 		}
 	}
-}
-.spollers {
-	&__item {
-	}
-	&__title {
-	}
-	&__body {
-	}
-}
-.checkbox {
-	&__input {
-	}
-	&__label {
-	}
-	&__text {
-	}
-}
-._icon-close {
 }
