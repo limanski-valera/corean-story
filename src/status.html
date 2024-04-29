@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Статус замовлення" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-border.htm',{})
+			<main class="page">
+				<div class="status-main">
+					<div class="status-main__container">
+						<div class="status-main__offer --ibg">
+							<div class="status-main__offer-content">
+								<h1 class="status-main__title">Статус замовлення</h1>
+								<div class="status-main__text">Статус вашого замовлення можна перевірити за номером замовлення, який був відправлений вам на Email</div>
+							</div>
+						</div>
+						<form action="#" class="status-main__form">
+							<div class="status-main__inputs">
+								<div class="input-wrapper">
+									<input type="email" class="input-wrapper__input input" name="email" placeholder="Email *" />
+									<span class="input-wrapper__placeholder">Email *</span>
+								</div>
+								<div class="input-wrapper">
+									<input type="text" class="input-wrapper__input input" name="orderNumber" placeholder="Номер замовлення *" />
+									<span class="input-wrapper__placeholder">Номер замовлення *</span>
+								</div>
+							</div>
+							<button class="button button--green">Перевірити</button>
+						</form>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

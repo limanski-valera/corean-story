@@ -1,0 +1,56 @@
+.status-main {
+	padding: toRem(40) 0;
+	@media (max-width: $mobile) {
+		padding-top: toRem(0);
+	}
+	&__container {
+		@include adaptiveValue("gap", 60, 24);
+		@media (min-width: $mobile) {
+			display: flex;
+		}
+	}
+	&__offer {
+		@include adaptiveValue("padding", 60, 16);
+		@include adaptiveValue("min-height", 580, 300);
+		border-radius: 20px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		position: relative;
+		background: url("@img/status-bg.jpeg") center center / cover no-repeat;
+		@media (min-width: $mobile) {
+			max-width: 50%;
+		}
+		@media (max-width: $mobile) {
+			border-radius: 10px;
+		}
+	}
+	&__offer-content {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 20, 8);
+	}
+	&__title {
+		@include adaptiveValue("font-size", 36, 22);
+		font-weight: 700;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+	&__text {
+		line-height: 1.3;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+	&__form {
+		align-self: center;
+		flex: 1 1 auto;
+	}
+	&__inputs {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(24);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 32);
+		}
+	}
+}
+//========================================================================================================================================================
