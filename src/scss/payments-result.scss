@@ -1,0 +1,50 @@
+.page-payment-result {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    @include adaptiveValue("padding-top", 170, 80);
+    @include adaptiveValue("padding-bottom", 170, 80);
+	&__bg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 100%;
+		max-height: 100%;
+	}
+	&__container {
+        position: relative;
+        z-index: 2;
+	}
+	&__offer {
+		max-width: toRem(650);
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	&__title {
+		font-size: toRem(36);
+		font-weight: 700;
+		line-height: 1.2;
+		text-transform: uppercase;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__text {
+		line-height: 1.3;
+		display: flex;
+		flex-direction: column;
+		gap: toRem(15);
+		color: #9f9f9f;
+		&:not(:last-child) {
+			margin-bottom: toRem(40);
+		}
+	}
+	&__button {
+	}
+}

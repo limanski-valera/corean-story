@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Дякуємо за замовлення!" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-border.htm',{})
+			<main class="page page-payment-result">
+				<img src="@img/logo-for-decoration.svg" alt="" class="page-payment-result__bg">
+				<div class="page-payment-result__container">
+					<div class="page-payment-result__offer">
+						<h1 class="page-payment-result__title">Дякуємо за замовлення!</h1>
+						<div class="page-payment-result__text">
+							<p>Ваше замовлення №400000005 було успішно оформлено і прийнято до обробки. Наші фахівці працюють над тим, щоб якомога швидше відправити його до вас.</p>
+							<p>Бажаємо вам приємного дня та чудового досвіду користування нашою косметикою.</p>
+						</div>
+						<a href="index.html" class="page-payment-result__button button">Продовжити покупки</a>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
