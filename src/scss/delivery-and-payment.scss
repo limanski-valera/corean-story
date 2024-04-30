@@ -1,0 +1,54 @@
+.delivery-adn-payment {
+	@include adaptiveValue("padding-bottom", 120, 56);
+	&__container {
+		display: flex;
+		gap: toRem(30);
+		padding-top: toRem(40);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	&__title {
+		max-width: toRem(520);
+		min-width: toRem(220);
+	}
+	&__body {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 40, 32);
+	}
+	&__part {
+	}
+	&__sub-title {
+		@include adaptiveValue("font-size", 26, 14);
+		@include adaptiveValue("margin-bottom", 20, 8);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__text {
+		@include adaptiveValue("font-size", 16, 12);
+		display: flex;
+		flex-direction: column;
+		gap: toRem(15);
+		line-height: 1.3;
+		a {
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				transition: color 0.3s;
+				&:hover {
+					color: $pinkColor;
+				}
+			}
+		}
+		ol {
+			padding-left: toRem(20);
+
+			@media (min-width: $mobile) {
+				display: flex;
+				flex-direction: column;
+				gap: toRem(5);
+			}
+		}
+	}
+}

@@ -381,6 +381,9 @@
 				color: $pinkColor;
 				pointer-events: none;
 			}
+			&._disabled {
+				pointer-events: none;
+			}
 		}
 		&__link {
 			font-size: toRem(15);
