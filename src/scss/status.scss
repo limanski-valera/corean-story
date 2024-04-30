@@ -54,3 +54,112 @@
 	}
 }
 //========================================================================================================================================================
+.page-status {
+	padding-top: toRem(30);
+	@include adaptiveValue("padding-bottom", 120, 56);
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue("gap", 60, 30);
+	&__container {
+		width: 100%;
+	}
+	&__btn-back {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__title {
+		@media (min-width: $mobile) {
+			text-align: center;
+		}
+	}
+	&__table {
+		width: 100%;
+	}
+	&__products {
+		&:not(:last-child) {
+			margin-bottom: toRem(60);
+		}
+	}
+	&__info {
+	}
+}
+.status-table {
+	display: none;
+	@media (min-width: $mobile) {
+		display: block;
+		&__head {
+			background-color: $lightPinkColor;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+		}
+		&__row {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: toRem(30);
+			justify-items: start;
+			padding: toRem(15);
+			max-width: toRem(1390);
+			margin: 0 auto;
+		}
+	}
+}
+.mobile-status-table {
+	display: none;
+	@media (max-width: $mobile) {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(8);
+		font-size: toRem(12);
+		&__item {
+		}
+		&__label {
+			padding: toRem(8) toRem(15);
+			background-color: $lightPinkColor;
+			font-weight: 700;
+			line-height: 1.3;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+		}
+		&__text {
+			padding: toRem(8) toRem(15);
+		}
+	}
+}
+.info-page-status {
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue("gap", 20, 8);
+	&__title {
+		@include adaptiveValue("font-size", 26, 20);
+		font-weight: 700;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+	&__content {
+		border-top: 1px solid rgba(2, 79, 58, 0.4);
+		@include adaptiveValue("padding-top", 20, 16);
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 30, 8);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	&__part {
+		max-width: toRem(300);
+		@include adaptiveValue("font-size", 16, 12);
+	}
+	&__label {
+		font-weight: 700;
+		line-height: 1.3;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+		margin-bottom: toRem(10);
+	}
+	&__part-body {
+		color: #9f9f9f;
+		line-height: 1.3;
+	}
+}

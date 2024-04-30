@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Статус замовлення" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-border.htm',{})
+			<main class="page page-status">
+				<div class="page-status__container">
+					<a href="#" class="page-status__btn-back btn-to-back _icon-arrow-right">Продовжити покупки</a>
+					<h1 class="page-status__title title">Статус замовлення</h1>
+				</div>
+				<table class="page-status__table status-table">
+					<thead class="status-table__head">
+						<tr class="status-table__row">
+							<th class="status-table__cell">Номер:</th>
+							<th class="status-table__cell">дата:</th>
+							<th class="status-table__cell">вартість:</th>
+							<th class="status-table__cell">Статус:</th>
+						</tr>
+					</thead>
+					<tbody class="status-table__body">
+						<tr class="status-table__row">
+							<td class="status-table__cell">№400000005</td>
+							<td class="status-table__cell">28.03.2024</td>
+							<td class="status-table__cell">930 UAH</td>
+							<td class="status-table__cell">Пакується</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="mobile-status-table">
+					<div class="mobile-status-table__item">
+						<h4 class="mobile-status-table__label">Номер:</h4>
+						<div class="mobile-status-table__text">№400000005</div>
+					</div>
+					<div class="mobile-status-table__item">
+						<h4 class="mobile-status-table__label">дата:</h4>
+						<div class="mobile-status-table__text">28.03.2024</div>
+					</div>
+					<div class="mobile-status-table__item">
+						<h4 class="mobile-status-table__label">вартість:</h4>
+						<div class="mobile-status-table__text">930 UAH</div>
+					</div>
+					<div class="mobile-status-table__item">
+						<h4 class="mobile-status-table__label">Статус:</h4>
+						<div class="mobile-status-table__text">Пакується</div>
+					</div>
+				</div>
+				<div class="page-status__container">
+					<div class="page-status__products cart__products">
+						<article class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img width="130" height="130" data-src="@img/products/05-2.png" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<div class="product-in-cart__header">
+									<div class="product-in-cart__header-main">
+										<h3 class="product-in-cart__title"><a href="#" class="product-in-cart__title-link">Заспокійливий тонер для обличчя</a></h3>
+										<div class="product-in-cart__info">Anua Heartleaf 77% Soothing</div>
+									</div>
+								</div>
+								<div class="product-in-cart__footer">
+									<span class="product-in-cart__count">1 шт.</span>
+									<span class="product-in-cart__price-sum"><span class="product-in-cart__price-sum-value">500</span> UAH</span>
+								</div>
+							</div>
+						</article>
+						<article class="cart__product product-in-cart">
+							<a href="#" class="product-in-cart__image">
+								<img width="130" height="130" data-src="@img/products/06-2.png" alt="" />
+							</a>
+							<div class="product-in-cart__content">
+								<div class="product-in-cart__header">
+									<div class="product-in-cart__header-main">
+										<h3 class="product-in-cart__title"><a href="#" class="product-in-cart__title-link">Заспокійливий тонер для обличчя</a></h3>
+										<div class="product-in-cart__info">Anua Heartleaf 77% Soothing</div>
+									</div>
+								</div>
+								<div class="product-in-cart__footer">
+									<span class="product-in-cart__count">1 шт.</span>
+									<span class="product-in-cart__price-sum"><span class="product-in-cart__price-sum-value">500</span> UAH</span>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="page-status__info info-page-status">
+						<h2 class="info-page-status__title">Інформація про доставку</h2>
+						<div class="info-page-status__content">
+							<div class="info-page-status__part">
+								<h3 class="info-page-status__label">Дані доставки:</h3>
+								<div class="info-page-status__part-body">
+									<p>Марія Літягіна</p>
+									<p>Склад 88</p>
+									<p>Дніпро, Дніпопетровська обл.</p>
+									<p>Mary@gmail.com</p>
+									<p>+380592887584</p>
+								</div>
+							</div>
+							<div class="info-page-status__part">
+								<h3 class="info-page-status__label">Спосіб доставки:</h3>
+								<div class="info-page-status__part-body">
+									<p>У відділення нової пошти</p>
+								</div>
+							</div>
+							<div class="info-page-status__part">
+								<h3 class="info-page-status__label">орієнтовна дата доставки:</h3>
+								<div class="info-page-status__part-body">
+									<p>Понедіілок, 8 квітня, 2024</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
