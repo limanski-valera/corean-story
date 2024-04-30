@@ -355,9 +355,6 @@ textarea.input {
   position: relative;
   cursor: pointer
 }
-.options__item:not(:last-child) {
-  margin-bottom: em(5)
-}
 .options__input {
   width: 0;
   height: 0;
