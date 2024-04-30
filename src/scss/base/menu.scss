@@ -214,7 +214,7 @@
 			transition:
 				visibility 0.3s,
 				opacity 0.3s;
-			._active & {
+			._catalog-open ._active & {
 				visibility: visible;
 				opacity: 1;
 			}
