@@ -1,0 +1,58 @@
+.contacts {
+	padding-bottom: toRem(40);
+	&__container {
+	}
+	&__content {
+		@include adaptiveValue("padding-top", 280, 160);
+		@include adaptiveValue("padding-bottom", 280, 160);
+		@include adaptiveValue("padding-left", 60, 15, 0, 1360, 992);
+		@include adaptiveValue("padding-right", 60, 15, 0, 1360, 992);
+		border-radius: 20px;
+		background: url("@img/contacts.png") center center / cover no-repeat;
+		@media (min-width: $mobile) {
+			display: flex;
+			gap: toRem(30);
+			align-items: center;
+		}
+	}
+	&__title {
+		max-width: toRem(470);
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(16);
+		}
+	}
+	&__body {
+		flex: 1 1 auto;
+		padding: toRem(40) 0;
+		border: 1px solid rgba(2, 79, 58, 0.4);
+		border-left: none;
+		border-right: none;
+		@media (max-width: $mobile) {
+			padding: toRem(16) 0;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(30);
+		flex-wrap: wrap;
+		@media (max-width: $mobile) {
+			gap: toRem(16);
+			flex-direction: column;
+		}
+	}
+	&__item {
+		@media (min-width: $mobile) {
+			&:first-child {
+				flex: 1 1 100%;
+			}
+		}
+	}
+	&__link {
+		font-weight: 700;
+		line-height: 1.6;
+		text-transform: uppercase;
+		text-decoration: underline;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+}

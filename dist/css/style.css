@@ -2164,6 +2164,35 @@ body::after {
   text-transform: uppercase;
   margin-bottom: 1.25rem
 }
+.contacts {
+  padding-bottom: 2.5rem
+}
+.contacts__content {
+  border-radius: 20px;
+  background: url(../img/contacts.webp) center center/cover no-repeat
+}
+.contacts__title {
+  max-width: 29.375rem
+}
+.contacts__body {
+  flex: 1 1 auto;
+  padding: 2.5rem 0;
+  border: 1px solid rgba(2,79,58,.4);
+  border-left: none;
+  border-right: none
+}
+.contacts__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.875rem;
+  flex-wrap: wrap
+}
+.contacts__link {
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-decoration: underline
+}
 .swiper {
   overflow: hidden
 }
@@ -2703,6 +2732,14 @@ body::after {
   .status-table__body {
     display: block
   }
+  .contacts__content {
+    display: flex;
+    gap: 1.875rem;
+    align-items: center
+  }
+  .contacts__item:first-child {
+    flex: 1 1 100%
+  }
 }
 @media (min-width:47.99875em) and (any-hover:hover) {
   .menu__link:hover {
@@ -3137,15 +3174,36 @@ body::after {
   .about__sub-title {
     font-size: 1rem
   }
+  .contacts__content {
+    padding-top: 17.5rem
+  }
+  .contacts__content {
+    padding-bottom: 17.5rem
+  }
+  .contacts__link {
+    font-size: 1rem
+  }
 }
 @media (min-width:85em) {
   .about__title-pin {
     font-size: 1rem
   }
+  .contacts__content {
+    padding-left: 3.75rem
+  }
+  .contacts__content {
+    padding-right: 3.75rem
+  }
 }
 @media (max-width:62em) {
   .about__title-pin {
     font-size: .75rem
+  }
+  .contacts__content {
+    padding-left: .9375rem
+  }
+  .contacts__content {
+    padding-right: .9375rem
   }
 }
 @media (max-width:20em) {
@@ -3417,6 +3475,15 @@ body::after {
     padding-top: 1.5rem
   }
   .about__sub-title {
+    font-size: .75rem
+  }
+  .contacts__content {
+    padding-top: 10rem
+  }
+  .contacts__content {
+    padding-bottom: 10rem
+  }
+  .contacts__link {
     font-size: .75rem
   }
 }
@@ -3981,6 +4048,16 @@ body::after {
   }
   .about {
     padding-top: 0
+  }
+  .contacts__title {
+    margin-bottom: 1rem
+  }
+  .contacts__body {
+    padding: 1rem 0
+  }
+  .contacts__list {
+    gap: 1rem;
+    flex-direction: column
   }
 }
 @media (max-width:47.99875em) and (any-hover:none) {
@@ -4952,6 +5029,36 @@ body::after {
       font-size: calc(.75rem + .25 * (100vw - 20rem)/ 68.75)
     }
   }
+  @supports (padding-top:clamp(10rem ,7.8181818182rem + 10.9090909091vw ,17.5rem)) {
+    .contacts__content {
+      padding-top: clamp(10rem ,7.8181818182rem + 10.9090909091vw ,17.5rem)
+    }
+  }
+  @supports not (padding-top:clamp(10rem ,7.8181818182rem + 10.9090909091vw ,17.5rem)) {
+    .contacts__content {
+      padding-top: calc(10rem + 7.5 * (100vw - 20rem)/ 68.75)
+    }
+  }
+  @supports (padding-bottom:clamp(10rem ,7.8181818182rem + 10.9090909091vw ,17.5rem)) {
+    .contacts__content {
+      padding-bottom: clamp(10rem ,7.8181818182rem + 10.9090909091vw ,17.5rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(10rem ,7.8181818182rem + 10.9090909091vw ,17.5rem)) {
+    .contacts__content {
+      padding-bottom: calc(10rem + 7.5 * (100vw - 20rem)/ 68.75)
+    }
+  }
+  @supports (font-size:clamp(0.75rem ,0.6772727273rem + 0.3636363636vw ,1rem)) {
+    .contacts__link {
+      font-size: clamp(.75rem ,.6772727273rem + .3636363636vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.75rem ,0.6772727273rem + 0.3636363636vw ,1rem)) {
+    .contacts__link {
+      font-size: calc(.75rem + .25 * (100vw - 20rem)/ 68.75)
+    }
+  }
 }
 @media (max-width:47.99875em) and (min-width:90em) {
   .banner__title {
@@ -5043,6 +5150,26 @@ body::after {
   @supports not (font-size:clamp(0.75rem ,0.0760869565rem + 1.0869565217vw ,1rem)) {
     .about__title-pin {
       font-size: calc(.75rem + .25 * (100vw - 62rem)/ 23)
+    }
+  }
+  @supports (padding-left:clamp(0.9375rem ,-6.6440217391rem + 12.2282608696vw ,3.75rem)) {
+    .contacts__content {
+      padding-left: clamp(.9375rem ,-6.6440217391rem + 12.2282608696vw ,3.75rem)
+    }
+  }
+  @supports not (padding-left:clamp(0.9375rem ,-6.6440217391rem + 12.2282608696vw ,3.75rem)) {
+    .contacts__content {
+      padding-left: calc(.9375rem + 2.8125 * (100vw - 62rem)/ 23)
+    }
+  }
+  @supports (padding-right:clamp(0.9375rem ,-6.6440217391rem + 12.2282608696vw ,3.75rem)) {
+    .contacts__content {
+      padding-right: clamp(.9375rem ,-6.6440217391rem + 12.2282608696vw ,3.75rem)
+    }
+  }
+  @supports not (padding-right:clamp(0.9375rem ,-6.6440217391rem + 12.2282608696vw ,3.75rem)) {
+    .contacts__content {
+      padding-right: calc(.9375rem + 2.8125 * (100vw - 62rem)/ 23)
     }
   }
 }
