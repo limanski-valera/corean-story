@@ -2522,7 +2522,7 @@ body::after {
     gap: 1.875rem;
     transition: visibility .3s,opacity .3s
   }
-  ._active .sub-menu__sub-categories {
+  ._catalog-open ._active .sub-menu__sub-categories {
     visibility: visible;
     opacity: 1
   }
