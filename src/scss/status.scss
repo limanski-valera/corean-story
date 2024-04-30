@@ -88,11 +88,13 @@
 	display: none;
 	@media (min-width: $mobile) {
 		display: block;
+		width: 100%;
 		&__head {
 			background-color: $lightPinkColor;
 			font-weight: 700;
 			text-transform: uppercase;
 			letter-spacing: 0.8px;
+			display: block;
 		}
 		&__row {
 			display: grid;
@@ -102,6 +104,9 @@
 			padding: toRem(15);
 			max-width: toRem(1390);
 			margin: 0 auto;
+		}
+		&__body {
+			display: block;
 		}
 	}
 }

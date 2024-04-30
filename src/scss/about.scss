@@ -1,0 +1,92 @@
+.about {
+	padding: toRem(40) 0;
+	@media (max-width: $mobile) {
+		padding-top: 0;
+	}
+	&__container {
+		@media (min-width: $tablet) {
+			display: flex;
+			@include adaptiveValue("gap", 60, 20, 0, 1360, 992);
+		}
+	}
+	&__image {
+		border-radius: 20px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (min-width: $tablet) {
+			flex: 0 0 47.794118%; /* 650/1360 */
+		}
+		@media (max-width: $tablet) {
+			position: relative;
+			padding-bottom: 100%;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	&__content {
+		padding: toRem(50) 0;
+		@media (max-width: $tablet) {
+			padding: toRem(40) 0 0 0;
+		}
+	}
+	&__title {
+		@media (min-width: $tablet) {
+			margin-bottom: toRem(140);
+			display: flex;
+			flex-direction: column;
+			span {
+				display: flex;
+				align-items: center;
+				gap: toRem(10);
+			}
+		}
+		@media (max-width: $tablet) {
+			margin-bottom: toRem(8);
+		}
+	}
+	&__title-pin {
+		padding: toRem(8);
+		border-radius: 30px;
+		background-color: $lightPinkColor;
+		white-space: nowrap;
+		@include adaptiveValue("font-size", 16, 12, 0, 1360, 992);
+		text-transform: none;
+		font-weight: 400;
+		line-height: 1;
+		display: inline-block;
+		@media (max-width: $tablet) {
+			margin-right: toRem(8);
+			margin-bottom: toRem(16);
+		}
+	}
+	&__text {
+		margin-left: auto;
+		@include adaptiveValue("margin-bottom", 40, 24);
+		color: #9f9f9f;
+		line-height: 1.3;
+		@include adaptiveValue("font-size", 16, 12);
+		@media (min-width: $tablet) {
+			max-width: toRem(508);
+		}
+	}
+	&__footer {
+		@include adaptiveValue("padding-top", 40, 24);
+		border-top: 1px solid rgba(2, 79, 58, 0.4);
+	}
+	&__sub-title {
+		font-weight: 700;
+		line-height: 1.3;
+		text-transform: uppercase;
+		margin-bottom: toRem(20);
+		@include adaptiveValue("font-size", 16, 12);
+	}
+	&__button {
+	}
+}
